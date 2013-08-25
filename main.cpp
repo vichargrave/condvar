@@ -55,8 +55,8 @@ int main(int argc, char** argv)
 {
     Mutex   mutex;
     CondVar cond(mutex);
-    ConditionTest* test = new ConditionTest(cond,mutex);
-    test->start();
+    ConditionTest test(cond,mutex);
+    test.start();
  
     printf("main() waiting to get mutex\n");
     mutex.lock();
@@ -68,7 +68,7 @@ int main(int argc, char** argv)
     }
     printf("main() detected value set to 1\n");
     mutex.unlock();
-    test->join();
+    test.join();
     
     exit(0);
 }
