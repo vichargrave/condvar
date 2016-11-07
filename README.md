@@ -1,6 +1,6 @@
 # condvar
 
-Example source code for the article [_Condition Variable Class in C++_](http://vichargrave.com/condition-variable-class-in-c/)
+Example code from my Condition Variable Class in C++blog.
 
 ## Build
 
